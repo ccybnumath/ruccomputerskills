@@ -74,7 +74,7 @@ double computeSum_dc_parallel_2(const vec & data, size_t beginI, size_t endI){
 #pragma omp parallel 
 {
   //nowait here does nothing.
-#pragma omp single
+#pragma omp single nowait
 {
 #pragma omp task
   r1 = computeSum_dc(data, beginI, beginI + half);
@@ -132,6 +132,6 @@ double serial_sum(const vec & data, size_t b,  size_t n)
 n <- 1e6
 data <- runif(n,0,1)
 library(microbenchmark)
-microbenchmark(computeSum_dc(data,0,n),computeSum_dc_parallel(data,0,n),sum_divideC(data))
+microbenchmark(computeSum_dc(data,0,n),computeSum_dc_parallel(data,0,n),sum_divideC(data),computeSum_dc_parallel_2(data,0,n))
 computeSum_dc_parallel_2(data,0,n)
 */
