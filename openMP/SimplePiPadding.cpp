@@ -7,7 +7,7 @@ using namespace std;
 // [[Rcpp::depends(RcppArmadillo, RcppDist)]]
 
 
-#define NUM_THREADS 16
+#define NUM_THREADS 2
 #define PAD 16// assume 128 byte L1 cache line size 
 // [[Rcpp::export]]
 int main()

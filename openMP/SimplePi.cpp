@@ -7,7 +7,7 @@ using namespace std;
 // [[Rcpp::depends(RcppArmadillo, RcppDist)]]
 
 
-#define NUM_THREADS 16
+#define NUM_THREADS 2
 
 // [[Rcpp::export]]
 int main()
