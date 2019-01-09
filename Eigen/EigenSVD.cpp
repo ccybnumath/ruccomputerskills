@@ -33,7 +33,7 @@ MatrixXd fixedRankApprox(MatrixXd A,int K){
 /*** R
 # read in image
 library(jpeg)
-img = readJPEG("./dog.jpg")
+img = readJPEG("./seg_big.jpg")
 img = img[,,1]
 
 # low rank approximation
