@@ -8,7 +8,7 @@
 double mcIntegration_Uniform(){
   double integral=0;
   int i;
-  int N=1e5;
+  int N=1e7;
   
   trng::yarn2 rx;
   double x;
@@ -19,5 +19,5 @@ double mcIntegration_Uniform(){
     x=u(rx);
     integral+=x*x;
   }
-  return integral/N;
+  return 3*integral/N;
 }
